@@ -1,0 +1,7 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="512" height="512" rx="256" fill="#E9F2FB"/>
+  <circle cx="256" cy="204" r="96" fill="#2864A5"/>
+  <path d="M96 438C118 364 178 322 256 322C334 322 394 364 416 438C375 483 320 512 256 512C192 512 137 483 96 438Z" fill="#2D7D66"/>
+  <circle cx="256" cy="256" r="242" stroke="white" stroke-width="20"/>
+  <text x="256" y="286" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="104" font-weight="800" fill="white">QH</text>
+</svg>
