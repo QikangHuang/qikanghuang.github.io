@@ -424,11 +424,14 @@ a:focus-visible {
 }
 
 .visitor-map-slot {
-  width: calc(100% - 50px);
-  max-width: 210px;
-  margin: 20px 0 0 50px;
-  display: flex;
-  justify-content: center;
+  width: 180px;
+  max-width: 100%;
+  margin: 18px auto 0;
+  display: grid;
+  place-items: center;
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.2;
   overflow: hidden;
 }
 
@@ -440,9 +443,18 @@ a:focus-visible {
 .visitor-map-slot img,
 .visitor-map-slot object,
 .visitor-map-slot embed,
-.visitor-map-slot canvas {
+.visitor-map-slot canvas,
+.visitor-map-slot table,
+.visitor-map-slot div,
+.visitor-map-slot a {
   max-width: 100% !important;
   border: 0;
+}
+
+.visitor-map-slot a {
+  color: var(--muted);
+  font-size: inherit;
+  font-weight: 600;
 }
 
 .footer p {
@@ -483,9 +495,8 @@ a:focus-visible {
   }
 
   .visitor-map-slot {
-    width: 100%;
     grid-column: 1 / -1;
-    max-width: 260px;
+    width: 180px;
     margin: 20px auto 0;
   }
 }
@@ -523,7 +534,7 @@ a:focus-visible {
   }
 
   .visitor-map-slot {
-    max-width: 230px;
+    width: 170px;
   }
 
   .section h2 {
