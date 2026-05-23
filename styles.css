@@ -424,14 +424,25 @@ a:focus-visible {
 }
 
 .visitor-map-slot {
-  width: min(1120px, calc(100% - 32px));
-  margin: 10px auto 0;
+  width: calc(100% - 50px);
+  max-width: 210px;
+  margin: 20px 0 0 50px;
   display: flex;
   justify-content: center;
+  overflow: hidden;
 }
 
 .visitor-map-slot:empty {
   display: none;
+}
+
+.visitor-map-slot iframe,
+.visitor-map-slot img,
+.visitor-map-slot object,
+.visitor-map-slot embed,
+.visitor-map-slot canvas {
+  max-width: 100% !important;
+  border: 0;
 }
 
 .footer p {
@@ -470,6 +481,13 @@ a:focus-visible {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     margin-top: 20px;
   }
+
+  .visitor-map-slot {
+    width: 100%;
+    grid-column: 1 / -1;
+    max-width: 260px;
+    margin: 20px auto 0;
+  }
 }
 
 @media (max-width: 680px) {
@@ -502,6 +520,10 @@ a:focus-visible {
   .profile-links {
     grid-template-columns: 1fr;
     text-align: left;
+  }
+
+  .visitor-map-slot {
+    max-width: 230px;
   }
 
   .section h2 {
