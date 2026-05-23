@@ -58,7 +58,7 @@ a:focus-visible {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 30px;
+  gap: 24px;
   overflow-x: auto;
   scrollbar-width: thin;
 }
@@ -235,9 +235,31 @@ a:focus-visible {
 }
 
 .entry {
+  display: grid;
+  grid-template-columns: 104px minmax(0, 1fr);
+  gap: 18px;
+  align-items: start;
   padding: 20px 22px;
   margin-bottom: 18px;
   border-radius: 8px;
+}
+
+.company-logo-card {
+  min-height: 82px;
+  display: grid;
+  place-items: center;
+  padding: 12px;
+  border: 1px solid var(--line);
+  border-radius: 7px;
+  background: var(--panel);
+}
+
+.company-logo-card img {
+  width: 100%;
+  max-width: 82px;
+  max-height: 52px;
+  display: block;
+  object-fit: contain;
 }
 
 .entry-heading {
@@ -433,6 +455,8 @@ a:focus-visible {
   font-size: 11px;
   line-height: 1.2;
   overflow: hidden;
+  text-align: center;
+  transform: translateX(-14px);
 }
 
 .visitor-map-slot:empty {
@@ -449,6 +473,8 @@ a:focus-visible {
 .visitor-map-slot a {
   max-width: 100% !important;
   border: 0;
+  margin-left: auto !important;
+  margin-right: auto !important;
 }
 
 .visitor-map-slot a {
@@ -498,6 +524,7 @@ a:focus-visible {
     grid-column: 1 / -1;
     width: 180px;
     margin: 20px auto 0;
+    transform: translateX(0);
   }
 }
 
@@ -535,6 +562,7 @@ a:focus-visible {
 
   .visitor-map-slot {
     width: 170px;
+    transform: translateX(-14px);
   }
 
   .section h2 {
@@ -543,6 +571,17 @@ a:focus-visible {
 
   .entry-heading {
     display: block;
+  }
+
+  .entry {
+    grid-template-columns: 1fr;
+    gap: 14px;
+    padding: 18px;
+  }
+
+  .company-logo-card {
+    width: 116px;
+    min-height: 76px;
   }
 
   .entry-heading time,

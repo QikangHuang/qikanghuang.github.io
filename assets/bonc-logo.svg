@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 128" role="img" aria-labelledby="title desc">
+  <title id="title">BONC logo</title>
+  <desc id="desc">A compact BONC wordmark for the professional experience section.</desc>
+  <rect width="420" height="128" fill="none"/>
+  <g transform="translate(18 20)">
+    <path d="M18 18h36c17 0 28 8 28 22 0 8-4 15-12 19 11 4 17 12 17 25 0 18-14 28-36 28H18V18zm31 36c8 0 13-4 13-11s-5-10-13-10H39v21h10zm2 43c10 0 15-5 15-13 0-9-6-13-16-13H39v26h12z" fill="#145fa8"/>
+    <path d="M100 65c0-29 22-50 52-50s52 21 52 50-22 50-52 50-52-21-52-50zm82 0c0-18-12-31-30-31s-30 13-30 31 12 31 30 31 30-13 30-31z" fill="#1b8f68"/>
+    <path d="M222 18h22l43 60V18h21v94h-20l-45-63v63h-21V18z" fill="#145fa8"/>
+    <path d="M326 65c0-29 22-50 52-50 17 0 31 6 41 18l-14 14c-7-8-15-12-26-12-18 0-31 12-31 30s13 30 31 30c11 0 19-4 26-12l14 14c-10 12-24 18-41 18-30 0-52-21-52-50z" fill="#e85b45"/>
+  </g>
+</svg>
