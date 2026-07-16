@@ -34,4 +34,4 @@ The embed script is:
 
 ## GitHub Pages
 
-Upload these files to the root of your `huangqk2026.github.io` repository. GitHub Pages will serve the site from `https://huangqk2026.github.io/`.
+Push these files to the root of the `qikanghuang.github.io` repository. GitHub Pages will serve the site from `https://qikanghuang.github.io/`.
