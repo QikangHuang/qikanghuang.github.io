@@ -10,19 +10,22 @@
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{0pt}
 \setlength{\tabcolsep}{0pt}
+\setlength{\emergencystretch}{2em}
+\hyphenpenalty=10000
+\exhyphenpenalty=10000
 \setlist[itemize]{
   leftmargin=1.25em,
   label=\textbullet,
-  itemsep=0.7pt,
-  topsep=1.2pt,
+  itemsep=0.8pt,
+  topsep=1.5pt,
   parsep=0pt,
   partopsep=0pt
 }
 
 \newcommand{\resumesection}[1]{%
-  \vspace{4pt}%
-  {\fontsize{14.5}{15}\selectfont\bfseries #1}\par
-  \vspace{-2pt}\hrule\vspace{2.5pt}%
+  \par\vspace{6pt}%
+  {\fontsize{12.8}{14}\selectfont\bfseries #1}\par
+  \vspace{1pt}\hrule height 0.45pt\vspace{4pt}%
 }
 
 \newcommand{\datedheading}[2]{%
@@ -32,7 +35,7 @@
 }
 
 \newcommand{\roleline}[1]{%
-  \vspace{-1pt}\textit{#1}\par\vspace{-1pt}%
+  \vspace{0.5pt}\textit{#1}\par\vspace{0.5pt}%
 }
 
 \begin{document}
@@ -44,14 +47,14 @@
   Address: China \quad -- \quad Phone: (86) 187-0378-7166 \quad -- \quad
   Email: \href{mailto:qikang@umich.edu}{qikang@umich.edu}
 \end{center}
-\vspace{-5pt}
+\vspace{-3pt}
 
 \resumesection{EDUCATION}
 \datedheading{University of Michigan, Ann Arbor}{Sep. 2026 -- May 2028}
 \roleline{M.S. in Electrical and Computer Engineering}
 Track: Signal \& Image Processing and Machine Learning
 
-\vspace{1pt}
+\vspace{3pt}
 \datedheading{Communication University of China / Coventry University}{Sep. 2022 -- Jun. 2026}
 \roleline{Sino-foreign Cooperative Education Program}
 \textit{B.Eng. in Intelligent Science and Technology} (Communication University of China)\\
@@ -70,16 +73,16 @@ Track: Signal \& Image Processing and Machine Learning
   \item Analyzed production failure cases from inspection robots and pig-counting modules, categorized false positives and false negatives, and supported model retraining and iteration.
 \end{itemize}
 
-\vspace{1pt}
+\vspace{3pt}
 \datedheading{ByteDance, Beijing, China}{Jul. 2025 -- Sept. 2025}
 \roleline{Algorithm Intern -- Loan Default Prediction Model Development and Optimization}
 \begin{itemize}
-  \item Built an end-to-end credit-risk prediction pipeline covering data cleaning, feature engineering, model training, hyperparameter tuning, and evaluation to predict whether users would default on loans.
+  \item Built an end-to-end credit-risk pipeline for loan-default prediction, covering data cleaning, feature engineering, model training, hyperparameter tuning, and evaluation.
   \item Engineered time, categorical, binned, correlation, time-window, and group-ratio features, and compared LightGBM, XGBoost, and CatBoost using stratified K-fold cross-validation and ROC-AUC.
   \item Applied PSI-based stability selection, L2 regularization, early stopping, and stacking; the optimized XGBoost model achieved an AUC of approximately 0.738.
 \end{itemize}
 
-\vspace{1pt}
+\vspace{3pt}
 \datedheading{Business Intelligence of Oriental Nations Corporation Ltd., Beijing, China}{Jan. 2025 -- Feb. 2025}
 \roleline{Data Analyst Assistant -- Telecom Traffic Revenue Forecasting}
 \begin{itemize}
@@ -92,8 +95,8 @@ Track: Signal \& Image Processing and Machine Learning
 \datedheading{Retrieval Strategy Optimization for Multi-turn Legal Consultation Systems Based on RAG}{Jan. 2026 -- May 2026}
 \roleline{Undergraduate Thesis}
 \begin{itemize}
-  \item Designed and implemented a RAG-based legal document retrieval optimization framework for multi-turn Chinese legal consultation, addressing context dependency, information omission, colloquial queries, and mismatch between user questions and formal legal expressions.
-  \item Built an evaluation pipeline based on the LexRAG dataset, covering 17,228 Chinese legal articles and 5,065 multi-turn consultation queries, and systematically evaluated retrieval recall and ranking quality using Recall@K and NDCG@K.
+  \item Designed a RAG-based legal retrieval framework for multi-turn consultations, addressing context dependence, omitted details, colloquial queries, and formal-language mismatch.
+  \item Built a LexRAG pipeline over 17,228 legal articles and 5,065 multi-turn queries, evaluating recall and ranking quality with Recall@K and NDCG@K.
   \item Integrated query rewriting, BGE-M3 hybrid retrieval, HyDE query enhancement, and Cross-Encoder reranking to improve candidate article recall and ranking performance.
   \item The HyDE-enhanced hybrid retrieval strategy improved Recall@10 from 0.3757 to 0.4701 and NDCG@10 from 0.2651 to 0.3349, providing empirical support for retrieval-chain optimization in legal RAG systems.
   \item Found that key bottlenecks were concentrated in query representation modeling and legal terminology expansion rather than simple reranking of candidate results.
