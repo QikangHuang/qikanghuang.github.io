@@ -312,6 +312,15 @@ a:focus-visible {
   background: #fff;
 }
 
+.bytedance-logo-card {
+  padding: 12px 8px;
+  background: #fff;
+}
+
+.bytedance-logo-card img {
+  filter: invert(1);
+}
+
 .entry-overview {
   min-width: 0;
 }

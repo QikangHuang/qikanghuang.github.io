@@ -1,0 +1,109 @@
+\documentclass[10pt,a4paper]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage{mathptmx}
+\usepackage[left=0.65in,right=0.65in,top=0.35in,bottom=0.30in]{geometry}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\setlength{\tabcolsep}{0pt}
+\setlist[itemize]{
+  leftmargin=1.25em,
+  label=\textbullet,
+  itemsep=0.7pt,
+  topsep=1.2pt,
+  parsep=0pt,
+  partopsep=0pt
+}
+
+\newcommand{\resumesection}[1]{%
+  \vspace{4pt}%
+  {\fontsize{14.5}{15}\selectfont\bfseries #1}\par
+  \vspace{-2pt}\hrule\vspace{2.5pt}%
+}
+
+\newcommand{\datedheading}[2]{%
+  \begin{tabular*}{\textwidth}{@{}p{0.79\textwidth}@{\extracolsep{\fill}}r@{}}
+    \textbf{#1} & #2
+  \end{tabular*}%
+}
+
+\newcommand{\roleline}[1]{%
+  \vspace{-1pt}\textit{#1}\par\vspace{-1pt}%
+}
+
+\begin{document}
+\fontsize{10.1}{12}\selectfont
+
+\begin{center}
+  {\fontsize{24}{26}\selectfont\bfseries Qikang Huang}\par
+  \vspace{4pt}
+  Address: China \quad -- \quad Phone: (86) 187-0378-7166 \quad -- \quad
+  Email: \href{mailto:qikang@umich.edu}{qikang@umich.edu}
+\end{center}
+\vspace{-5pt}
+
+\resumesection{EDUCATION}
+\datedheading{University of Michigan, Ann Arbor}{Sep. 2026 -- May 2028}
+\roleline{M.S. in Electrical and Computer Engineering}
+Track: Signal \& Image Processing and Machine Learning
+
+\vspace{1pt}
+\datedheading{Communication University of China / Coventry University}{Sep. 2022 -- Jun. 2026}
+\roleline{Sino-foreign Cooperative Education Program}
+\textit{B.Eng. in Intelligent Science and Technology} (Communication University of China)\\
+\textit{BSc (Hons) in Computer Science with Artificial Intelligence, First Class Honours} (Coventry University)
+\begin{itemize}
+  \item \textbf{GPA:} 88/100
+  \item \textbf{Core Courses:} Large Models and Deep Learning (98), Neural Networks and Deep Learning (97), Natural Language Processing (89), Machine Learning (92), Data Structures (93), Computer Vision (91)
+\end{itemize}
+
+\resumesection{PROFESSIONAL EXPERIENCE}
+\datedheading{iFLYTEK Co., Ltd., Zhengzhou, China}{Jan. 2026 -- Apr. 2026}
+\roleline{Assistant Research Algorithm Engineer -- Smart Livestock Vision System}
+\begin{itemize}
+  \item Contributed to YOLOv8-based pig vision models for smart farming scenarios, including pig counting, posture detection, backfat-related classification, and abnormal-case monitoring.
+  \item Refined the training-data feedback loop by validating 10,000+ RGB/depth images in LabelMe and correcting missed, false, duplicate, and inaccurate bounding-box annotations.
+  \item Analyzed production failure cases from inspection robots and pig-counting modules, categorized false positives and false negatives, and supported model retraining and iteration.
+\end{itemize}
+
+\vspace{1pt}
+\datedheading{ByteDance, Beijing, China}{Jul. 2025 -- Sept. 2025}
+\roleline{Algorithm Intern -- Loan Default Prediction Model Development and Optimization}
+\begin{itemize}
+  \item Built an end-to-end credit-risk prediction pipeline covering data cleaning, feature engineering, model training, hyperparameter tuning, and evaluation to predict whether users would default on loans.
+  \item Engineered time, categorical, binned, correlation, time-window, and group-ratio features, and compared LightGBM, XGBoost, and CatBoost using stratified K-fold cross-validation and ROC-AUC.
+  \item Applied PSI-based stability selection, L2 regularization, early stopping, and stacking; the optimized XGBoost model achieved an AUC of approximately 0.738.
+\end{itemize}
+
+\vspace{1pt}
+\datedheading{Business Intelligence of Oriental Nations Corporation Ltd., Beijing, China}{Jan. 2025 -- Feb. 2025}
+\roleline{Data Analyst Assistant -- Telecom Traffic Revenue Forecasting}
+\begin{itemize}
+  \item Supported a telecom operator mobile data-traffic revenue forecasting project to predict future revenue and identify key business drivers.
+  \item Analyzed traffic-revenue time series with ACF/PACF, built ARIMA, SARIMA, ETS, and Prophet models, and evaluated performance using MAE.
+  \item Selected SARIMA as the best-performing model, completed a 14-month revenue forecast, and proposed optimization recommendations on traffic unit price, average usage, billed users, and zero-billed users.
+\end{itemize}
+
+\resumesection{RESEARCH EXPERIENCE}
+\datedheading{Retrieval Strategy Optimization for Multi-turn Legal Consultation Systems Based on RAG}{Jan. 2026 -- May 2026}
+\roleline{Undergraduate Thesis}
+\begin{itemize}
+  \item Designed and implemented a RAG-based legal document retrieval optimization framework for multi-turn Chinese legal consultation, addressing context dependency, information omission, colloquial queries, and mismatch between user questions and formal legal expressions.
+  \item Built an evaluation pipeline based on the LexRAG dataset, covering 17,228 Chinese legal articles and 5,065 multi-turn consultation queries, and systematically evaluated retrieval recall and ranking quality using Recall@K and NDCG@K.
+  \item Integrated query rewriting, BGE-M3 hybrid retrieval, HyDE query enhancement, and Cross-Encoder reranking to improve candidate article recall and ranking performance.
+  \item The HyDE-enhanced hybrid retrieval strategy improved Recall@10 from 0.3757 to 0.4701 and NDCG@10 from 0.2651 to 0.3349, providing empirical support for retrieval-chain optimization in legal RAG systems.
+  \item Found that key bottlenecks were concentrated in query representation modeling and legal terminology expansion rather than simple reranking of candidate results.
+\end{itemize}
+
+\resumesection{SKILLS \& INTERESTS}
+\begin{itemize}
+  \item \textbf{Technical Skills:} Vibe Coding, Python, PyTorch, NumPy, OpenCV, Matplotlib, LaTeX
+  \item \textbf{Languages:} English (IELTS: 7.0, GRE: 325), Chinese
+  \item \textbf{Interests:} Fitness, Hiking
+\end{itemize}
+
+\end{document}
