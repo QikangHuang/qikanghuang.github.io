@@ -39,3 +39,36 @@ navLinks.forEach((link) => {
     }
   });
 });
+
+const lightbox = document.getElementById("figure-lightbox");
+
+if (lightbox && typeof lightbox.showModal === "function") {
+  const lightboxImg = lightbox.querySelector("img");
+  const lightboxCaption = lightbox.querySelector(".lightbox-caption");
+  const lightboxOpen = lightbox.querySelector(".lightbox-open");
+
+  document.querySelectorAll(".project-figure").forEach((trigger) => {
+    trigger.addEventListener("click", () => {
+      const src = trigger.dataset.full;
+      const thumb = trigger.querySelector("img");
+      lightboxImg.src = src;
+      lightboxImg.alt = thumb ? thumb.alt : "";
+      lightboxCaption.textContent = trigger.dataset.caption || "";
+      lightboxOpen.href = src;
+      lightbox.showModal();
+    });
+  });
+
+  lightbox.querySelector(".lightbox-close").addEventListener("click", () => lightbox.close());
+
+  lightbox.addEventListener("click", (event) => {
+    if (event.target === lightbox) {
+      lightbox.close();
+    }
+  });
+} else {
+  // Very old browsers without <dialog>: fall back to opening the image directly.
+  document.querySelectorAll(".project-figure").forEach((trigger) => {
+    trigger.addEventListener("click", () => window.open(trigger.dataset.full, "_blank", "noopener"));
+  });
+}

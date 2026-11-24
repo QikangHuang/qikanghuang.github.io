@@ -8,7 +8,7 @@
       content="Qikang Huang's academic CV homepage: education, research, experience, projects, skills, and resume."
     >
     <title>Qikang Huang | Academic CV</title>
-    <link rel="stylesheet" href="styles.css?v=20261124-rag">
+    <link rel="stylesheet" href="styles.css?v=20261124-lightbox">
   </head>
   <body>
     <header class="site-header" aria-label="Primary navigation">
@@ -206,20 +206,20 @@
         <section class="section" id="research">
           <h2>Research Projects</h2>
           <article class="project has-figure">
-            <a
+            <button
+              type="button"
               class="project-figure"
-              href="https://github.com/QikangHuang/LexRAG-Optimized-Retrieval-Framework"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="View the LexRAG project code on GitHub"
+              data-full="assets/rag-model.png"
+              data-caption="LexRAG optimized retrieval framework: query-side HyDE enhancement, BGE-M3 hybrid retrieval backbone with cross-query fusion, and cross-encoder reranking."
+              aria-label="Enlarge the model figure"
             >
               <img
                 src="assets/rag-model.png"
                 alt="Model overview: query-side HyDE enhancement, BGE-M3 hybrid retrieval backbone with cross-query fusion, and cross-encoder reranking"
                 loading="lazy"
               >
-              <span class="project-figure-hint">View code on GitHub &rarr;</span>
-            </a>
+              <span class="project-figure-hint">Click to enlarge</span>
+            </button>
             <div>
               <h3>Retrieval Strategy Optimization for Multi-turn Legal Consultation Systems</h3>
               <p class="meta">Undergraduate Thesis - Jan. 2026 - May 2026</p>
@@ -239,6 +239,14 @@
                 <span>BGE-M3</span>
                 <span>HyDE</span>
                 <span>Cross-Encoder</span>
+              </div>
+              <div class="button-row">
+                <a
+                  class="button secondary"
+                  href="https://github.com/QikangHuang/LexRAG-Optimized-Retrieval-Framework"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >Code on GitHub &rarr;</a>
               </div>
             </div>
           </article>
@@ -322,6 +330,15 @@
       <p>(c) 2026 Qikang Huang. Built for GitHub Pages.</p>
     </footer>
 
-    <script src="script.js"></script>
+    <dialog class="lightbox" id="figure-lightbox" aria-label="Enlarged figure">
+      <button type="button" class="lightbox-close" aria-label="Close">&times;</button>
+      <div class="lightbox-scroll">
+        <img src="" alt="">
+      </div>
+      <p class="lightbox-caption"></p>
+      <a class="lightbox-open" href="#" target="_blank" rel="noopener noreferrer">Open full-size image</a>
+    </dialog>
+
+    <script src="script.js?v=20261124-lightbox"></script>
   </body>
 </html>

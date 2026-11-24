@@ -401,19 +401,24 @@ a:focus-visible {
 }
 
 .project.has-figure {
-  grid-template-columns: 300px minmax(0, 1fr);
-  align-items: center;
+  grid-template-columns: 1fr;
+  gap: 18px;
 }
 
 .project-figure {
   display: flex;
   flex-direction: column;
   gap: 8px;
+  width: 100%;
+  margin: 0;
   padding: 10px;
   border: 1px solid var(--line);
   border-radius: 8px;
   background: var(--panel);
-  transition: border-color 0.2s ease, transform 0.2s ease;
+  color: inherit;
+  font: inherit;
+  cursor: zoom-in;
+  transition: border-color 0.2s ease;
 }
 
 .project-figure img {
@@ -434,13 +439,73 @@ a:focus-visible {
 .project-figure:hover,
 .project-figure:focus-visible {
   border-color: var(--accent);
-  text-decoration: none;
-  transform: translateY(-2px);
+  outline: none;
 }
 
 .project-figure:hover .project-figure-hint,
 .project-figure:focus-visible .project-figure-hint {
   color: var(--accent-strong);
+}
+
+.lightbox {
+  width: min(1760px, 96vw);
+  max-width: 96vw;
+  max-height: 94vh;
+  padding: 44px 16px 16px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--card);
+  color: var(--text);
+  overflow: auto;
+}
+
+.lightbox::backdrop {
+  background: rgba(0, 0, 0, 0.85);
+}
+
+.lightbox-scroll {
+  overflow-x: auto;
+  border-radius: 6px;
+  background: #ffffff;
+}
+
+.lightbox-scroll img {
+  width: 100%;
+  height: auto;
+  max-height: 78vh;
+  display: block;
+  object-fit: contain;
+}
+
+.lightbox-caption {
+  margin: 12px 0 4px;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.lightbox-open {
+  font-size: 14px;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  width: 32px;
+  height: 32px;
+  border: 1px solid #3a4048;
+  border-radius: 50%;
+  background: var(--panel);
+  color: var(--heading);
+  font-size: 20px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.lightbox-close:hover,
+.lightbox-close:focus-visible {
+  border-color: var(--accent);
+  outline: none;
 }
 
 .project-media-alt {
@@ -746,5 +811,11 @@ a:focus-visible {
 
   .resume-preview {
     height: 330px;
+  }
+
+  .lightbox-scroll img {
+    width: 1100px;
+    max-width: none;
+    max-height: none;
   }
 }
