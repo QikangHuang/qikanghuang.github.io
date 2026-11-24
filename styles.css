@@ -400,6 +400,49 @@ a:focus-visible {
   letter-spacing: 0;
 }
 
+.project.has-figure {
+  grid-template-columns: 300px minmax(0, 1fr);
+  align-items: center;
+}
+
+.project-figure {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 10px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--panel);
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.project-figure img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 5px;
+  background: #ffffff;
+}
+
+.project-figure-hint {
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.project-figure:hover,
+.project-figure:focus-visible {
+  border-color: var(--accent);
+  text-decoration: none;
+  transform: translateY(-2px);
+}
+
+.project-figure:hover .project-figure-hint,
+.project-figure:focus-visible .project-figure-hint {
+  color: var(--accent-strong);
+}
+
 .project-media-alt {
   background:
     linear-gradient(135deg, rgba(45, 125, 102, 0.92), rgba(121, 86, 149, 0.72)),
@@ -691,6 +734,7 @@ a:focus-visible {
   }
 
   .project,
+  .project.has-figure,
   .cv-panel,
   .education-grid {
     grid-template-columns: 1fr;
