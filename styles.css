@@ -1,15 +1,18 @@
 :root {
-  --bg: #ffffff;
-  --panel: #f7f9fb;
-  --panel-strong: #eef4f8;
-  --text: #2f3742;
-  --muted: #66717f;
-  --line: #e5ebf0;
-  --accent: #2864a5;
-  --accent-strong: #174c82;
-  --accent-soft: #e9f2fb;
-  --green: #2d7d66;
-  --shadow: 0 14px 35px rgba(28, 48, 76, 0.08);
+  color-scheme: dark;
+  --bg: #000000;
+  --panel: #111316;
+  --panel-strong: #181b20;
+  --text: #d7dce2;
+  --muted: #9aa3ad;
+  --line: #262a30;
+  --accent: #6ea8ff;
+  --accent-strong: #9cc4ff;
+  --accent-soft: #14233a;
+  --green: #4fbf9a;
+  --shadow: 0 14px 35px rgba(0, 0, 0, 0.6);
+  --heading: #f2f4f7;
+  --card: #0c0d10;
   font-family: "Inter", "Segoe UI", Arial, sans-serif;
 }
 
@@ -46,7 +49,7 @@ a:focus-visible {
   position: sticky;
   top: 0;
   z-index: 10;
-  background: rgba(255, 255, 255, 0.94);
+  background: rgba(0, 0, 0, 0.88);
   border-bottom: 1px solid var(--line);
   backdrop-filter: blur(12px);
 }
@@ -65,7 +68,7 @@ a:focus-visible {
 
 .nav-link {
   flex: 0 0 auto;
-  color: #5d6672;
+  color: var(--muted);
   font-size: 15px;
   font-weight: 700;
   line-height: 1;
@@ -104,14 +107,14 @@ a:focus-visible {
   display: block;
   margin: 0 auto 22px;
   border-radius: 50%;
-  border: 6px solid #f3f7fa;
+  border: 6px solid #1a1d22;
   box-shadow: var(--shadow);
   object-fit: cover;
 }
 
 .profile h1 {
   margin: 0;
-  color: #3b4450;
+  color: var(--heading);
   font-size: 28px;
   line-height: 1.2;
   letter-spacing: 0;
@@ -119,7 +122,7 @@ a:focus-visible {
 
 .profile-subtitle {
   margin: 10px 0 0;
-  color: #47515e;
+  color: var(--text);
   font-size: 16px;
   font-weight: 750;
 }
@@ -136,7 +139,7 @@ a:focus-visible {
   gap: 14px;
   margin: 0;
   padding: 0;
-  color: #48515d;
+  color: var(--text);
   font-size: 15px;
 }
 
@@ -148,7 +151,7 @@ a:focus-visible {
 }
 
 .icon {
-  color: #6a7480;
+  color: var(--muted);
   font-size: 12px;
   font-weight: 800;
   line-height: 1;
@@ -172,7 +175,7 @@ a:focus-visible {
   margin: 0 0 18px;
   padding-bottom: 10px;
   border-bottom: 1px solid var(--line);
-  color: #3c4652;
+  color: var(--heading);
   font-size: 26px;
   line-height: 1.25;
   letter-spacing: 0;
@@ -180,7 +183,7 @@ a:focus-visible {
 
 .section h3 {
   margin: 0 0 6px;
-  color: #2e3a46;
+  color: var(--heading);
   font-size: 19px;
   line-height: 1.35;
   letter-spacing: 0;
@@ -190,22 +193,13 @@ a:focus-visible {
   margin: 0 0 12px;
 }
 
-.callout {
-  display: block;
-  margin-top: 18px;
-  padding: 14px 16px;
-  border-left: 4px solid var(--accent);
-  background: var(--accent-soft);
-  color: #33475c;
-}
-
 .news-box {
   max-height: 282px;
   overflow: auto;
   padding: 6px 18px 6px 0;
-  border-right: 10px solid #f0f3f6;
+  border-right: 10px solid var(--panel);
   scrollbar-width: thin;
-  scrollbar-color: #a3adb8 #f0f3f6;
+  scrollbar-color: #3a4048 var(--panel);
 }
 
 .timeline {
@@ -215,13 +209,13 @@ a:focus-visible {
 
 .timeline li {
   margin-bottom: 13px;
-  color: #46515f;
+  color: var(--text);
 }
 
 .timeline time {
   display: inline-block;
   min-width: 76px;
-  color: #3e4651;
+  color: var(--heading);
   font-weight: 800;
 }
 
@@ -230,8 +224,8 @@ a:focus-visible {
 .education-card,
 .cv-panel {
   border: 1px solid var(--line);
-  background: #fff;
-  box-shadow: 0 8px 24px rgba(32, 51, 73, 0.04);
+  background: var(--card);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
 }
 
 .entry {
@@ -262,7 +256,7 @@ a:focus-visible {
   right: 20px;
   width: 22px;
   height: 22px;
-  border: 1px solid #cfd8e2;
+  border: 1px solid #3a4048;
   border-radius: 50%;
   color: var(--muted);
   content: "+";
@@ -284,7 +278,7 @@ a:focus-visible {
 }
 
 .entry-summary:focus-visible {
-  box-shadow: inset 0 0 0 2px rgba(40, 100, 165, 0.24);
+  box-shadow: inset 0 0 0 2px rgba(110, 168, 255, 0.35);
   outline: none;
 }
 
@@ -296,7 +290,7 @@ a:focus-visible {
   padding: 12px;
   border: 1px solid var(--line);
   border-radius: 7px;
-  background: var(--panel);
+  background: #ffffff;
   flex: 0 0 auto;
 }
 
@@ -338,7 +332,7 @@ a:focus-visible {
 
 .entry-title {
   display: block;
-  color: #2e3a46;
+  color: var(--heading);
   font-size: 19px;
   font-weight: 800;
   line-height: 1.32;
@@ -362,7 +356,7 @@ a:focus-visible {
 
 .entry-heading time,
 .education-card time {
-  color: #586575;
+  color: var(--muted);
   font-size: 14px;
   font-weight: 800;
   white-space: nowrap;
@@ -393,7 +387,7 @@ a:focus-visible {
 
 .project-media {
   min-height: 126px;
-  border: 1px solid #cadce9;
+  border: 1px solid #2a3442;
   border-radius: 8px;
   background:
     linear-gradient(135deg, rgba(40, 100, 165, 0.9), rgba(45, 125, 102, 0.72)),
@@ -424,10 +418,10 @@ a:focus-visible {
   align-items: center;
   min-height: 28px;
   padding: 4px 10px;
-  border: 1px solid #d5e2eb;
+  border: 1px solid #2e333a;
   border-radius: 6px;
   background: var(--panel);
-  color: #3f4d5c;
+  color: var(--text);
   font-size: 13px;
   font-weight: 750;
 }
@@ -451,7 +445,7 @@ a:focus-visible {
 }
 
 .education-card p {
-  color: #4c5866;
+  color: var(--text);
 }
 
 .skill-group {
@@ -474,7 +468,7 @@ a:focus-visible {
   border: 1px solid var(--line);
   border-radius: 6px;
   background: var(--panel);
-  box-shadow: 0 10px 24px rgba(27, 48, 72, 0.12);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.6);
 }
 
 .resume-preview img {
@@ -502,20 +496,20 @@ a:focus-visible {
   border: 1px solid var(--accent);
   border-radius: 7px;
   background: var(--accent);
-  color: #fff;
+  color: #000;
   font-weight: 800;
   line-height: 1.2;
 }
 
 .button:hover,
 .button:focus-visible {
-  color: #fff;
+  color: #000;
   background: var(--accent-strong);
   text-decoration: none;
 }
 
 .button.secondary {
-  background: #fff;
+  background: transparent;
   color: var(--accent);
 }
 
